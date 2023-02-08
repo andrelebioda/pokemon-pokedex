@@ -14,8 +14,6 @@ const PokemonDetailPageInfo = ({ data, abilities, moves }) => {
 
   const navigate = useNavigate();
 
-  console.log(pokemon);
-
   return (
     <div className={`detail-page__wrapper ${pokemon.types[0].type.name}`}>
       <div className="detail-page__inner">
