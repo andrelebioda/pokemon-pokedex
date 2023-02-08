@@ -1,17 +1,33 @@
-import '../src/scss/style.scss'
+import "../src/scss/style.scss";
+
+//import components
+import Pokemon from "./components/Pokemon";
+import PokemonDetailPage from "./components/PokemonDetailPage";
+
+//import react query
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+const queryClient = new QueryClient();
+
+//import and config react router
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Pokemon />,
+  },
+  {
+    path: "/:pokemon",
+    element: <PokemonDetailPage />,
+  },
+]);
 
 const App = () => {
   return (
-    <div className="container">
-      <h1>Vite reactjs boilerplate </h1>
-      <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores,
-        necessitatibus sed culpa vero veritatis architecto aliquid laborum ipsum
-        ducimus debitis facere maxime, iure perferendis doloribus minima quia
-        commodi vitae!
-      </p>
-    </div>
-  )
-}
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  );
+};
 
-export default App
+export default App;

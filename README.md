@@ -1,9 +1,24 @@
-# **simple vite-reactjs-boilerplate**
+# Pokémon Pokédex
 
-### install all dependencies
+A Pokémon Pokédex app about all pokémon. Built with React, React-Query and the Pokémon API. Pagination to navigate between different pages and pokémon.
+Each pokémon has a detailpage with more information.
 
-> npm install
+## Getting Started
 
-### run app in browser
+Clone repo
 
-> npm run dev
+```bash
+git clone https://github.com/andrelebioda/pokemon-pokedex
+```
+
+Install all dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
